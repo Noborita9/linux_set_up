@@ -1,3 +1,0 @@
-Para poder correr comandos que afectan la shell actual se necesita usar:
-Source /path
-Asi cuando los invocamos se ejecutan en la shell que estamos usando.
