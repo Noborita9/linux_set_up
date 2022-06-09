@@ -1,71 +1,88 @@
-set nocompatible
-set showmatch
-set ignorecase
-set mouse=v
-set nohlsearch
-set incsearch
-set tabstop=4
-set softtabstop=4
-set expandtab
-set shiftwidth=4
+" Configs
 set autoindent
-set wildmode=longest, list
-filetype plugin indent on
-set mouse=a
-set clipboard=unnamedplus
-filetype plugin on
-set cursorline
-set ttyfast
-set ruler
-set encoding=utf-8
-set relativenumber
-set exrc
-set guicursor=
-set hidden
-set noerrorbells
-set nowrap
-set noswapfile
-set nobackup
-set undodir=~/.vim/undodir
-set undofile
-set scrolloff=8
-set noshowmode
-set signcolumn=yes
+set backspace=2
+set cmdheight=3
 set colorcolumn=80
+set cursorcolumn
+set cursorline
+set expandtab
+set exrc
 set number
-syntax on
+set numberwidth=2
+set sw=4
+set sc
+set showmatch
+set sft
+set smartindent
+set smarttab
+set ts=4
+set syntax=ON
+set nowrap
+set encoding=utf-8
+set nocompatible
+set ttyfast
+set scrolloff=10
+set noshowmode
 
-
-set cmdheight=2
+" Pluggins
 
 call plug#begin('~/.vim/plugged')
-Plug 'nvim-telescope/telescope.nvim'
+
 Plug 'gruvbox-community/gruvbox'
-Plug 'nvim-lua/plenary.nvim'
-Plug 'alvan/vim-closetag'
-Plug 'preservim/nerdtree'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'vim-syntastic/syntastic'
+Plug 'vifm/vifm.vim'
+Plug 'rstacruz/sparkup'
 Plug 'jiangmiao/auto-pairs'
+
 call plug#end()
 
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
+" Colors
+
+let g:airline_theme='dark'
+let g:airline#extensions#tabline#enabled = 1
+let g:airline_powerline_fonts = 1
+
 colorscheme gruvbox
+
 hi Normal guibg=none ctermbg=none
 
-let NERDTreeQuitOnOpen=1
+
+" Mappings
+
 let mapleader=" "
 
-nmap <Leader>w :w<CR>
-nmap <Leader>q :q<CR>
-nnoremap <Leader>nt :NERDTreeToggle<CR>
-nnoremap <Leader>ps :lua require('telescope.builtin').grep_string({ search = vim.fn.input("Grep For > ")})<CR>
+nnoremap <Leader>w :w<CR>
+nnoremap <Leader>q :q<CR>
+nnoremap <Leader>c :bd<CR>
+nnoremap <Leader>o :EditVifm<CR>
+nnoremap <Leader>s :VsplitVifm<CR>
+nnoremap <Leader>. <c-w>l:set scrolloff=10<CR>
+nnoremap <Leader>, <c-w>h:set scrolloff=10<CR>
 
+" Functions
+
+" Credit to THE_PRIMEAGEN
 fun! TrimWhitespace()
     let l:save = winsaveview()
     keeppatterns %s/\s\+$//e
     call winrestview(l:save)
 endfun
 
-augroup THE_PRIMEAGEN
+augroup NOBORITA
     autocmd!
     autocmd BufWritePre * :call TrimWhitespace()
 augroup END
 
+" see :h syntastic-loclist-callback
+function! SyntasticCheckHook(errors)
+    if !empty(a:errors)
+        let g:syntastic_loc_list_height = min([len(a:errors), 10])
+    endif
+endfunction
