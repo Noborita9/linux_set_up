@@ -8,6 +8,7 @@ set cursorline
 set expandtab
 set exrc
 set number
+set relativenumber
 set numberwidth=2
 set sw=4
 set sc
