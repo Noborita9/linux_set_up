@@ -1,0 +1,6 @@
+#!/usr/bin/bash
+
+ln vim_related/.vimrc ~/.vimrc
+mkdir ~/.config/nvim
+ln vim_related/init.vim ~/.config/nvim
+

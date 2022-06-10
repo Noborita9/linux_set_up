@@ -30,8 +30,6 @@ set noshowmode
 call plug#begin('~/.vim/plugged')
 
 Plug 'gruvbox-community/gruvbox'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
 Plug 'vim-syntastic/syntastic'
 Plug 'vifm/vifm.vim'
 Plug 'rstacruz/sparkup'
@@ -46,14 +44,9 @@ let g:syntastic_check_on_wq = 0
 
 " Colors
 
-let g:airline_theme='dark'
-let g:airline#extensions#tabline#enabled = 1
-let g:airline_powerline_fonts = 1
-
 colorscheme gruvbox
 
 hi Normal guibg=none ctermbg=none
-
 
 " Mappings
 
