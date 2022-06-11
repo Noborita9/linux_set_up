@@ -29,13 +29,14 @@ set noshowmode
 
 call plug#begin('~/.vim/plugged')
 
-Plug 'gruvbox-community/gruvbox'
+"Plug 'gruvbox-community/gruvbox'
 Plug 'vim-syntastic/syntastic'
 Plug 'vifm/vifm.vim'
 Plug 'rstacruz/sparkup'
 Plug 'jiangmiao/auto-pairs'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'Rigellute/shades-of-purple.vim'
 
 call plug#end()
 
@@ -54,7 +55,12 @@ let g:syntastic_check_on_wq = 0
 
 " Colors
 
-colorscheme gruvbox
+if (has("termguicolors"))
+    set termguicolors
+endif
+
+syntax enable
+colorscheme shades_of_purple
 
 hi Normal guibg=none ctermbg=none
 
