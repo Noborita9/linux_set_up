@@ -34,8 +34,18 @@ Plug 'vim-syntastic/syntastic'
 Plug 'vifm/vifm.vim'
 Plug 'rstacruz/sparkup'
 Plug 'jiangmiao/auto-pairs'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 
 call plug#end()
+
+" Airline
+
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#left_sep = ' '
+let g:airline#extensions#tabline#left_alt_sep = '|'
+let g:airline#extensions#tabline#formatter = 'default'
+
 
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1

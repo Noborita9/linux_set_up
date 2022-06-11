@@ -48,14 +48,15 @@ workspace_layout default
 ##############################
 
 #border indicator on windows:
-new_window pixel 6
+new_window pixel 4
 
 # thin borders
 # hide_edge_borders both
 
 # Set inner/outer gaps
-gaps inner 6
-gaps outer 3
+gaps inner 4
+gaps outer 4
+smart_borders on
 smart_gaps on
 
 # show window title bars (not officially supported with i3gaps)
@@ -480,9 +481,9 @@ set $brigthyellow	#fff700
 
 # define colors for windows:
 #class		        	border		bground		text		indicator	child_border
-client.focused		    $violet   	$darkblue	$white		$purple		$mediumgrey
+client.focused		    $white   	$darkblue	$white		$purple		$mediumgrey
 client.unfocused	    $violet 	$darkblue	$grey		$purple		$darkgrey
-client.focused_inactive	$violet	$darkblue	$grey		$purple		$black
+client.focused_inactive	$violet	    $darkblue	$grey		$purple		$black
 client.urgent		    $violet     $urgentred	$white		$purple		$yellowbrown
 
 ############################################
@@ -504,7 +505,7 @@ client.urgent		    $violet     $urgentred	$white		$purple		$yellowbrown
 # When strip_workspace_numbers is set to yes,
 # any workspace that has a name of the form
 # “[n][:][NAME]” will display only the name.
-#strip_workspace_numbers yes
+# strip_workspace_numbers yes
 ##strip_workspace_name no
 
 #		    colors {
@@ -535,7 +536,7 @@ client.urgent		    $violet     $urgentred	$white		$purple		$yellowbrown
 # When strip_workspace_numbers is set to yes,
 # any workspace that has a name of the form
 # “[n][:][NAME]” will display only the name.
-#strip_workspace_numbers yes
+# strip_workspace_numbers yes
 ##strip_workspace_name no
 #
 #	colors {
@@ -583,4 +584,15 @@ bindsym $mod+t exec rofi -show window \
 exec --no-startup-id Variety
 bar {
     status_command python /usr/share/powerline/bindings/i3/powerline-i3.py
+    position top
+    strip_workspace_numbers yes
+    tray_padding 4
+    colors {
+        background $violet
+        statusline $white
+    }
 }
+
+workspace 1 output HDMI-1
+
+workspace_auto_back_and_forth yes
