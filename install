@@ -1,6 +1,13 @@
 #!/usr/bin/bash
 
+# Vim config
 ln vim_related/.vimrc ~/.vimrc
 mkdir ~/.config/nvim
 ln vim_related/init.vim ~/.config/nvim
+
+# Bash config
+
+echo -e "#################\n#   My Config   #\n#################" >> ~/.bashrc
+
+echo "source ~/my_packages/linux/bash_scripts/alias" >> ~/.bashrc
 

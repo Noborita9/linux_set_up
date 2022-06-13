@@ -1,0 +1,7 @@
+#!/usr/bin/bash
+
+alias cdmk='source $HOME/my_packages/linux/bash_scripts/dirCreator/dirCreator'
+alias jscomp='$HOME/my_packages/linux/bash_scripts/jsComp/jsComp'
+alias cdd='cd ~/Desktop'
+alias py='pyhton'
+alias v='nvim'

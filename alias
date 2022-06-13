@@ -1,5 +1,0 @@
-#!/usr/bin/bash
-
-alias cdmk='source $HOME/.bash_scripts/dirCreator/dirCreator'
-alias jscomp='$HOME/.bash_scripts/jsComp/jsComp'
-alias cdd='cd ~/Desktop'
