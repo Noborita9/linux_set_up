@@ -1,1 +1,22 @@
+font pango: Jet Brains Mono 12
+workspace 1 output HDMI-1
 workspace_auto_back_and_forth yes
+bar {
+     status_command python /usr/share/powerline/bindings/i3/powerline-i3.py
+     position top
+     strip_workspace_numbers yes
+     tray_padding 4
+     colors {
+         background #9072db
+         statusline $white
+         separator  #ee00ff
+ #                           border          bg              txt         indicat
+         focused_workspace   #bf5eff         #00d9ff         $darkblue   $purple
+         active_workspace    $lightdblue     #ff00fb         $darkblue   $purple
+         inactive_workspace  $darkblue       #e994f2         $darkblue   $purple
+         urgent_workspace    $urgentred      $urgentred      $white      $purple
+
+    }
+}
+
+exec --no-startup-id variety
