@@ -3,7 +3,7 @@
 # Powerline instalation
 
 export PATH="$PATH:/home/noborita9/.local/bin/"
-export LC_ALL=en_US.UTF-8
+#export LC_ALL=en_US.UTF-8
 
 powerline-daemon -q
 

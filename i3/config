@@ -1,8 +1,8 @@
-font pango: Jet Brains Mono 12
+font pango: Jet Brains Mono 14
 workspace 1 output HDMI-1
 workspace_auto_back_and_forth yes
 bar {
-     status_command python /usr/share/powerline/bindings/i3/powerline-i3.py
+     status_command python ~/.local/lib/python3.10/site-packages/powerline/bindings/i3/powerline-i3.py
      position top
      strip_workspace_numbers yes
      tray_padding 4
