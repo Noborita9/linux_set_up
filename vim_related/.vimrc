@@ -46,7 +46,7 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#left_sep = ' '
 let g:airline#extensions#tabline#left_alt_sep = '|'
 let g:airline#extensions#tabline#formatter = 'default'
-
+let g:airline_theme='violet'
 
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
@@ -75,6 +75,7 @@ nnoremap <Leader>o :EditVifm<CR>
 nnoremap <Leader>s :VsplitVifm<CR>
 nnoremap <Leader>. <c-w>l:set scrolloff=10<CR>
 nnoremap <Leader>, <c-w>h:set scrolloff=10<CR>
+inoremap jj <ESC>
 
 " Functions
 
