@@ -64,6 +64,7 @@ colorscheme shades_of_purple
 
 hi Normal guibg=none ctermbg=none
 
+
 " Mappings
 
 let mapleader=" "
@@ -97,3 +98,4 @@ function! SyntasticCheckHook(errors)
         let g:syntastic_loc_list_height = min([len(a:errors), 10])
     endif
 endfunction
+
