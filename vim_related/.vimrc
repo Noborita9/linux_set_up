@@ -99,3 +99,8 @@ function! SyntasticCheckHook(errors)
     endif
 endfunction
 
+if (has("autocmd"))
+    augroup skeletons
+        autocmd BufNewFile *.py 0r ~/my_packages/linux/vim_related/skeletons/skeleton.py
+    augroup END
+endif
