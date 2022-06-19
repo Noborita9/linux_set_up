@@ -1,6 +1,0 @@
-#!/usr/bin/bash
-
-echo -e "#################\n#   My Config   #\n#################" >> ~/.bashrc
-
-echo "source ~/my_packages/linux/bash_scripts/alias" >> ~/.bashrc
-
