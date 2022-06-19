@@ -37,6 +37,7 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'Rigellute/shades-of-purple.vim'
+Plug 'mattn/emmet-vim'
 
 call plug#end()
 
@@ -102,5 +103,6 @@ endfunction
 if (has("autocmd"))
     augroup skeletons
         autocmd BufNewFile *.py 0r ~/my_packages/linux/vim_related/skeletons/skeleton.py
+        autocmd BufNewFile *.html 0r ~/my_packages/linux/vim_related/skeletons/skeleton.html
     augroup END
 endif
