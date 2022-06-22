@@ -14,6 +14,11 @@ bar {
          statusline $white
          separator  #ee00ff
  #                           border          bg              txt         indicat
+     colors {
+         background #9072db
+         statusline $white
+         separator  #ee00ff
+                           border          bg              txt         indicat
          focused_workspace   $white         #ff00fb         $black      $purple
          active_workspace    $white         #1cfff4         $black      $purple
          inactive_workspace  $white         #912aeb         $black      $purple
