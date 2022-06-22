@@ -1,23 +1,25 @@
+#NOTE install pyenv, i3ipc powerline-status powerline-gitstatus
 font pango: Jet Brains Mono 14
 workspace 1 output HDMI-1
 workspace_auto_back_and_forth yes
 default_border pixel 4
 bar {
-     status_command python ~/.local/lib/python3.10/site-packages/powerline/bindings/i3/powerline-i3.py
-     position top
-     strip_workspace_numbers yes
-     tray_padding 4
-     colors {
-         background #9072db
-         statusline $white
-         separator  #ee00ff
+    font pango: Jet Brains Mono 14
+    status_command python ~/.local/lib/python3.10/site-packages/powerline/bindings/i3/powerline-i3.py
+ #    position top
+ #    strip_workspace_numbers yes
+ #    tray_padding 4
+#     colors {
+#         background #9072db
+#         statusline $white
+#         separator  #ee00ff
  #                           border          bg              txt         indicat
-         focused_workspace   $white         #ff00fb         $black      $purple
-         active_workspace    $white         #1cfff4         $black      $purple
-         inactive_workspace  $white         #912aeb         $black      $purple
-         urgent_workspace    $white         $urgentred      $black      $purple
-
-    }
+#         focused_workspace   $white         #ff00fb         $black      $purple
+#         active_workspace    $white         #1cfff4         $black      $purple
+#         inactive_workspace  $white         #912aeb         $black      $purple
+#         urgent_workspace    $white         $urgentred      $black      $purple
+#
+#    }
 }
 # Shortcuts
 bindsym $mod+Shift+d exec discord
