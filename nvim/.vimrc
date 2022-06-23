@@ -59,6 +59,7 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#left_sep = ' '
 let g:airline#extensions#tabline#left_alt_sep = '|'
 let g:airline#extensions#tabline#formatter = 'default'
+let g:airline_powerline_fonts = 1
 let g:airline_theme='violet'
 
 let g:syntastic_always_populate_loc_list = 1
@@ -248,7 +249,7 @@ endfunction
 
 if (has("autocmd"))
     augroup skeletons
-        autocmd BufNewFile *.py 0r ~/my_packages/linux/vim_related/skeletons/skeleton.py
-        autocmd BufNewFile *.html 0r ~/my_packages/linux/vim_related/skeletons/skeleton.html
+        autocmd BufNewFile *.py 0r ~/my_packages/linux/nvim/skeletons/skeleton.py
+        autocmd BufNewFile *.html 0r ~/my_packages/linux/nvim/skeletons/skeleton.html
     augroup END
 endif
