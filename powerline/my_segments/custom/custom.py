@@ -12,7 +12,7 @@ class CustomSegment(Segment):
   def __call__(self, pl, segment_info, create_watcher):
     return [{
       'contents': 'hello',
-      'highlight_groups': ['information:regular'],
+      'highlight_groups': ['cwd'],
       }]
 
 hello = with_docstring(CustomSegment(), '''Return a custom segment.''')
