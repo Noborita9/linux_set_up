@@ -1,7 +1,0 @@
-setup.py
-custom/__init__.py
-custom/custom.py
-mysegments.egg-info/PKG-INFO
-mysegments.egg-info/SOURCES.txt
-mysegments.egg-info/dependency_links.txt
-mysegments.egg-info/top_level.txt
