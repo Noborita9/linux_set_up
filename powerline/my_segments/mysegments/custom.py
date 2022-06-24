@@ -11,7 +11,7 @@ class CustomSegment(Segment):
 
   def __call__(self, pl, segment_info, create_watcher):
     return [{
-      'contents': 'hello',
+      'contents': 'Testing contents',
       'highlight_groups': ['cwd'],
       }]
 
