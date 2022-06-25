@@ -251,5 +251,6 @@ if (has("autocmd"))
     augroup skeletons
         autocmd BufNewFile *.py 0r ~/my_packages/linux/nvim/skeletons/skeleton.py
         autocmd BufNewFile *.html 0r ~/my_packages/linux/nvim/skeletons/skeleton.html
+        autocmd BufNewFile *.sh 0r ~/my_packages/linux/nvim/skeletons/skeleton.sh
     augroup END
 endif
