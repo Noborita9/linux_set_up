@@ -27,7 +27,7 @@ from libqtile.lazy import lazy
 from libqtile.utils import guess_terminal
 
 mod = "mod1"
-terminal = "wezterm"
+terminal = "alacritty"
 myBrowser = "google-chrome-stable"
 
 keys = [
@@ -73,7 +73,7 @@ keys = [
     Key([mod], "d", lazy.spawn("sh /home/nobora/.config/rofi/launchers/ribbon/launcher.sh" ), desc="Launch rofi"),
 ]
 
-group_names = 'DEV WWW GFX MUS ETC'.split()
+group_names = 'DEV WWW GFX MUS DIS ETC'.split()
 groups = [Group(name, layout='columns') for name in group_names]
 for i, name in enumerate(group_names, 1):
     indx = str(i)
@@ -84,8 +84,8 @@ for i, name in enumerate(group_names, 1):
 layouts = [
     layout.Columns(
         border_on_single = True,
-        border_focus = "#e413e8",
-        border_normal = "#6808a3",
+        border_focus = "#6808a3",
+        border_normal = "#5e548e",
         border_focus_stack=["#e413e8", "#6808a3"],
         border_width=4,
         margin = 4,
@@ -124,9 +124,10 @@ screens = [
                     markup = True
                     ),
                 widget.Prompt(),
+                widget.Pomodoro(),
                 widget.Sep(
                     foreground = "#231942",
-                    padding = 690,
+                    padding = 510,
                     ),
                 widget.GroupBox(
                     highlight_method = "line",
@@ -151,7 +152,7 @@ screens = [
                     foreground='#00ff00',
                     name_transform=lambda name: name.upper(),
                 ),
-                widget.Systray(),
+                #widget.Systray(),
                 widget.Sep(
                     foreground = "#231942",
                     padding = 470,
